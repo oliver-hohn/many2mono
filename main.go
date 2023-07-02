@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/oliverhohn/many2mono/cmd"
 
 func main() {
-	fmt.Println("Hello, world!")
+	cmd.Execute()
 }
