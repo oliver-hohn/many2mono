@@ -8,7 +8,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "many2mono",
-	Short: "TBD",
+	Short: "One-stop-shop for moving from many repos to a single mono repo!",
 }
 
 func Execute() {

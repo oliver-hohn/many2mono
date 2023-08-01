@@ -15,7 +15,7 @@ var dryRun bool
 
 var runCmd = &cobra.Command{
 	Use:   "run",
-	Short: "TBD",
+	Short: "Merge many repos into the current repo",
 	Args:  cobra.MatchAll(cobra.MinimumNArgs(1)),
 	Run: func(cmd *cobra.Command, args []string) {
 		repos := []*model.Repo{}
@@ -66,7 +66,7 @@ func findDuplicateRepoNames(repos []*model.Repo) []string {
 func init() {
 	rootCmd.AddCommand(runCmd)
 
-	runCmd.Flags().StringVarP(&defaultBranch, "branch", "b", "main", "TBD")
+	runCmd.Flags().StringVarP(&defaultBranch, "branch", "b", "main", "branch to use when pulling remote repos into the current repo")
 
-	runCmd.Flags().BoolVar(&dryRun, "dry-run", false, "TBD")
+	runCmd.Flags().BoolVar(&dryRun, "dry-run", false, "set to true to see what operations would be done")
 }
